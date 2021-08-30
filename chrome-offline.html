@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chromecast offline</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(54, 54, 54);
+            color: white;
+            font-family: fantasy;
+            overflow: hidden;
+        }
+
+        .formas {
+            width: 49%;
+            display: flex;
+            position: relative;
+            top: 10px;
+            justify-content: space-around;
+        }
+
+        .bolinha {
+            position: relative;
+            top: 130px;
+            left: 50px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: lightgrey;
+            z-index: 1;
+        }
+
+        .bolao-wrapper {
+            position: relative;
+            left: 48px;
+        }
+
+        .sombra-bolao {
+            width: 180px;
+            height: 90px;
+            background-color: rgb(54, 54, 54);;
+            position: absolute;
+            transform: rotate(140deg);
+            right: 23px;
+        }
+
+        .bolao {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        .bola {
+            position: relative;
+            top: 45px;
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            background-color: grey;
+            z-index: 1;
+        }
+
+        .triangulo-wrapper {
+            position: relative;
+            right: 45px;
+        }
+
+        .triangulo {
+            position: relative;
+            top: 103px;
+            width: 68px;
+            height: 68px;
+            background-color: #fff;
+        }
+
+        .sombra-triangulo {
+            position: relative;
+            width: 110px;
+            height: 57.5px;
+            background-color: rgb(54, 54, 54);
+            transform: rotate(45deg);
+            top: 20px;
+        }
+
+        .textos {
+            width: 49%;
+            font-size: 2rem;
+            z-index: 1;
+        }
+
+        .interrogacao {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+        }
+
+        .interrogacao p {
+            position: relative;
+            bottom: 31px;
+            left: 5px;
+            font-size: 1.7rem;
+        }
+
+        .url {
+            margin-left: 50px;
+        }
+
+        .rodape {
+            display: block;
+            text-align: end;
+            width: 100%;
+            height: 20%;
+            font-size: 1.4rem;
+        }
+
+        .conect-wrapper {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            float: right;
+            right: 240px;
+            top: 25px;
+        }
+
+        .sombra1 {
+            position: relative;
+            width: 15px;
+            height: 20px;
+            background-color: rgb(54, 54, 54);
+            z-index: 5;
+            left: 45px;
+            top: 52px;
+        }
+
+        .sombra2 {
+            position: relative;
+            width: 100%;
+            height: 15px;
+            background-color: rgb(54, 54, 54);
+            z-index: 5;
+            top: 52px;
+            left: 45px;
+        }
+
+        .circulo-interno {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            z-index: 3;
+            top: 65px;
+            left: 55px;
+        }
+
+        .circulo-meio {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: rgb(54, 54, 54);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            z-index: 2;
+            top: 59px;
+            left: 50px;
+        }
+
+        .circulo-externo {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(54, 54, 54);
+            border: 3px solid #fff;
+            border-radius: 50%;
+            z-index: 1; 
+            top: 55px;
+            left: 50px;
+        }
+
+        .quadrado {
+            position: relative;
+            width: 22px;
+            height: 16px;
+            background-color: rgb(54, 54, 54);
+            border: 3px solid #fff;
+            border-radius: 3px;
+            z-index: 0;
+            left: 60px;
+            top: 15px;
+        }
+
+        .rodape p {
+            position: relative;
+            top: 50px;
+            margin-right: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formas">
+        <div class="bolinha"></div>
+
+        <div class="bolao-wrapper">
+            <div class="sombra-bolao"></div>
+            <div class="bolao"></div>
+        </div>
+        
+        <div class="bola"></div>
+
+        <div class="triangulo-wrapper">
+            <div class="triangulo"></div>
+            <div class="sombra-triangulo"></div>
+        </div>
+    </div>
+
+    <div class="textos">
+        <h1>Verifique a conexão com a Internet</h1>
+        <p>Tente reiniciar seu roteador Wi-Fi <br> ou escolha outra rede Wi-Fi no app <br> Google Home.</p>
+        <div class="interrogacao"><p>?</p></div> <p class="url">chromecast.com/help</p>
+    </div>
+
+    <div class="rodape">
+        <div class="conect-wrapper">
+            <div class="sombra1"></div>
+            <div class="sombra2"></div>
+            <div class="circulo-interno"></div>
+            <div class="circulo-meio"></div>
+            <div class="circulo-externo"></div>
+            <div class="quadrado"></div>
+        </div>
+        <p>Sala de TV</p>
+    </div>
+</body>
+</html>
